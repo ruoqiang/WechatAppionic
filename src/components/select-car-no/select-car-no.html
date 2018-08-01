@@ -1,0 +1,42 @@
+<!-- Generated template for the SelectCarNoComponent component -->
+
+  <div class="car-select-no-box fadeIn" #carSelectBox [ngStyle]="{'display':popIsfadeIn === true ? 'block' : 'none' }">
+    <div class="keyboard-list-box fadeIn" #keyboardListBox >
+    <ul class="keyboard-list" id="provinceList" #keyboardList [ngStyle]="{'display':childKeyBoardShow === true ? 'none' : 'block' }">
+      <li class="list-item clearfix">
+          <div class="p-item" *ngFor="let item of provinceRow1" (click)="provinceSelect(item.name)">{{item.name}}</div>
+      </li>
+      <li class="list-item  clearfix">
+          <span class="p-item" *ngFor="let item of provinceRow2" (click)="provinceSelect(item.name)">{{item.name}}</span>
+      </li>
+      <li class="list-item list-three clearfix">
+        <span class="p-item  p-item-null"></span>
+          <span class="p-item" *ngFor="let item of provinceRow3" (click)="provinceSelect(item.name)">{{item.name}}</span>
+          <span class="p-item p-item-null"></span>
+      </li>
+      <li class="list-item  list-four clearfix">
+          <span class="p-item p-item-null"></span>
+          <span class="p-item" *ngFor="let item of provinceRow4" (click)="provinceSelect(item.name)">{{item.name}}</span>
+          <span class="p-item p-item-close" (click)="hide()">取消</span>
+          <span class="p-item p-item-null"></span>
+      </li>
+    </ul>
+      <ul class="keyboard-list" id="simKeyBoard"  #simKeyBoard [ngStyle]="{'display':childKeyBoardShow === true ? 'block' : 'none' }">
+    <li class="list-item clearfix">
+        <span class="p-item" *ngFor="let item of carNo1" (click)="carNoSelect(item.name)">{{item.name}}</span>
+    </li>
+    <li class="list-item  clearfix">
+        <span class="p-item" *ngFor="let item of carNo2" (click)="carNoSelect(item.name)">{{item.name}}</span>
+    </li>
+    <li class="list-item list-three clearfix" style="width:90%">
+        <span class="p-item" *ngFor="let item of carNo3" (click)="carNoSelect(item.name)">{{item.name}}</span>
+    </li>
+    <li class="list-item  list-four clearfix">
+        <span class="p-item" *ngFor="let item of carNo4" (click)="carNoSelect(item.name)">{{item.name}}</span>
+        <span class="p-item delete" (click)="deleteVal()" style="min-width:35px">&lt;</span>
+        <span class="p-item font-confirm" (click)="confirm()" style="min-width:40px" >确认</span>
+    </li>
+  </ul>
+  </div>
+
+</div>

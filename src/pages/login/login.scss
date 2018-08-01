@@ -1,0 +1,147 @@
+page-login {
+
+}
+ion-icon{
+    padding-right: 0.5rem;
+}
+ion-icon::before{
+    padding-top: 0.1rem;
+
+}
+div.title {
+    width: 100%;
+    padding: 30px 0 25px 0;
+    text-align: center;
+    color: #2d4ed1;
+    font-size: 18px;
+}
+.inputBox {
+    padding: 0px ;
+    position: relative;
+    color: #2d4ed1;
+    font-size: 14px;
+}
+.inputBox .input {
+    padding: 0;
+    height: 56px;
+    line-height: 56px;
+    text-align: left;
+    position: relative;
+   
+}
+.inputBox .input label{
+    font-size: 14px;
+    color: #333;
+    min-width: 70px;
+    display: inline-block;
+}
+.inputBox .input input{
+    color: #333;
+/* margin-top: -1px; */
+background: none;
+}
+input, textarea, select, button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 13.3333px Arial;
+    color: #333;
+    background: none;
+}
+// .buttonBox {
+//     // padding: 0px 14px;
+//     position: relative;
+//     color: #2d4ed1;
+//     font-size: 16px;
+//     margin-top: 51px;
+// }
+// .buttonBox .button {
+//     padding: 12px 0;
+//     text-align: center;
+//     color: #fff;
+//     background: #2d4ed1;
+//     border-radius: 3px;
+// }
+.forget-register {
+    margin: 25px 14px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.top-tip {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 500;
+    background: #666;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+// .confirm {
+//     position: fixed;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     z-index: 998;
+//     background-color: rgba(0,0,0,0.3);
+// }
+.forget-register a {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    font-size: 13px;
+    color: #666;
+    display: block;
+}
+.forget-register a.register-btn {
+    color: #2d4ed1;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input{
+    margin: 0;
+  padding: 0;
+  border: 0;
+//   font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+.button{
+    width: 100%;
+}
+  
+.eye{
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    // background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFW…WxZRvwAt7iywy2mAF9SmX3Pei/qH1AH9AH9AF9wJzaPwEGABTYivIWM3zIAAAAAElFTkSuQmCC);
+    // background-size: 100% 100%;
+    top: 15px;
+}
+.input ion-icon {
+    display: inline-block;
+    font-size: 1.5em;
+}

@@ -1,0 +1,71 @@
+page-user-carinfo {
+    .selected-car-box {
+        width: 75%;
+        font-size: 0;
+        position: absolute;
+        left: 80px;
+        top: 0;
+        height: 49px
+    }
+    
+    .selected-car-box input {
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ccc;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        margin: 0 4px;
+        -webkit-appearance: none
+    }
+    
+    .selected-car-box input:last-child {
+        border: 1px solid #2d4ed1
+    }
+    
+    .selected-car-box input:nth-child(3) {
+        margin-right: 12px
+    }
+    
+    .selected-car-box .line {
+        display: inline-block;
+        width: 1px;
+        height: 22px;
+        background: #ccc;
+        vertical-align: middle;
+        position: absolute;
+        left: 63px;
+        top: 12px
+    }
+    .carColorType{
+        position: absolute;
+        left: 100px;
+        top:13px;
+        z-index: 2;
+        width: 70%;
+        -webkit-appearance:none;
+        border: none;
+        font-size: 14px;
+    }
+    .ion-ios-arrow-forward{
+        position: absolute;
+        top: -7px;
+        font-size: 23px;
+        color: #949494;
+    }
+option{
+    -webkit-appearance:none; /* Safari 和 Chrome */
+    border: none;
+}
+/* --背景色字体颜色--*/
+option:hover{
+    color:#fff;
+    background-color:#949494;
+}
+option:focus {outline: none; border: none;}
+
+}
+// .disable-hover{
+//     pointer-events: none;
+// }

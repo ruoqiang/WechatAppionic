@@ -1,0 +1,77 @@
+<ion-header>
+    <ion-navbar>
+      <!-- <ion-icon name="arrow-back"><span>返回</span></ion-icon> -->
+      <ion-title>车辆信息</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content>
+    <div class="head-setp">
+        <div class="setp">
+            <div class="setp-tips-box">
+                <span >申请人信息</span><span class="active">车辆信息</span><span class="">证件照片</span><span class="">收货地址</span>
+            </div>
+            <div class="setp-dot-box">
+                <span class="active"></span><span class="active setp-line"></span><span class="active"></span><span class="active setp-line"></span>
+                <span class="">
+                </span><span class="setp-line"></span><span class=""></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-box" style="pointer-events: auto;">
+        <div class="inputBox padType2">
+            <div class="input size-2 align-2"><h2>车辆信息</h2></div>
+        </div> <div class="inputBox padType2">
+            <div class="input size-2 align-2">
+                <label>车牌颜色</label>
+                 <!-- <input type="text" readonly="readonly"  [(ngModel)]="carColorType"> -->
+                 <select class="carColorType" #CarColorType>
+                    <option value="0" >蓝牌</option>
+                    <option value="1" >黄牌</option>
+                    <option value="2">黑牌</option>
+                    <option value="3">白牌</option>
+                </select>
+                <div class="icon-more"><ion-icon name="ios-arrow-forward"></ion-icon></div>
+            </div>
+        </div> <div class="inputBox padType2">
+            <div class="input size-2 align-2">
+                <label>车牌号</label> 
+                <!-- <span  *ngFor="let item of carNum">{{item}}</span> -->
+                <div class="selectedValueBox" >
+                    <span class="line"></span>
+                    <input type="text" name="" placeholder="" value="" readonly="readonly"> 
+                    <input type="text" name="" placeholder="" value="" readonly="readonly"> 
+                    <input type="text" name="" placeholder="" value="" readonly="readonly">
+                    <input type="text" name="" placeholder="" value="" readonly="readonly">
+                     <input type="text" name="" placeholder="" value="" readonly="readonly"> <input type="text" name="" placeholder="" value="" readonly="readonly">
+                    <input type="text" name="" placeholder="" value="" readonly="readonly">
+                </div> 
+                <div class="selected-car-box" (click)="selectCarNo.show()">
+                    <span class="line"></span>
+                    <input type="text"  placeholder=""  readonly=""  *ngFor="let item of carNum"  [value]="item">
+                </div>
+                
+            </div>
+        </div> <div class="inputBox padType2">
+            <div class="input size-2 align-2">
+                <label>发动机号</label> <input type="text" name="" placeholder="请输入发动机号" [(ngModel)]="engineNum" maxlength="20">
+            </div>
+        </div> <div class="inputBox padType2">
+            <div class="input size-2 align-2">
+                <label>车辆识别代码</label> <input type="text" name="" placeholder="请输入车辆识别代码" [(ngModel)]="carVin" maxlength="20">
+            </div>
+        </div> <div class="inputBox padType2">
+            <div class="input size-2 align-2"><label>车辆品牌</label> <input type="text" name="" placeholder="请输入车辆品牌" [(ngModel)]="carBrand" maxlength="20"></div>
+        </div>
+        <div class="inputBox padType2">
+            <div class="input size-2 align-2"><label>核定载重(kg)</label> <input type="text" name="" placeholder="请输入核定载重" [(ngModel)]="carLoad" maxlength="20"></div>
+        </div>
+    </div>
+    <div class="buttonBox" (click)="nextPage()" [ngClass]="{'disable':btnDisable===true}">
+        <div class="plr15 mt40">
+            <button ion-button block [color]="btnDisable===true?'light':''">下一步</button>
+        </div>
+    </div>
+    <select-car-no #selectCarNo class="car-select-no-box" (childOuterSelectedValue)="selectedCarValueFromChild($event)" [carNoValFromParent]="carNum"></select-car-no>
+    <div style="height: 40px; pointer-events: auto;"></div>
+</ion-content>

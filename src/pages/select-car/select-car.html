@@ -1,0 +1,31 @@
+
+<ion-header>
+    <ion-navbar>
+        <ion-title>车辆选择</ion-title>
+    </ion-navbar>
+</ion-header>
+  <ion-content>
+    <div id="select-car" [hidden]="carInfoList.length===0">
+        <div class="select-car-title" >
+            请先选择要查询的车辆
+        </div>
+        <div class="form-box">
+                <ion-scroll scrollY="true">
+                    <div style="height:40px;"></div>
+                    <div class="car-list" *ngFor="let item of carInfoList" (tap)="selectCarGotoPage(item)">
+                        <div class="car-img"><img src="assets/imgs/img01.png"></div>
+                        <div class="car-number">{{item.CarNum}}</div> <div class="icon-more2"><ion-icon name="arrow-forward"></ion-icon></div>
+                    </div>
+                </ion-scroll>
+        </div>
+        
+    </div>
+    <div class="tips-status-box" [hidden]="carInfoList.length>0">
+            <div class="ptc">
+                <div class="tips-status">
+                    <p class="statusImg"></p> <p class="desc">您还没有车辆哦～</p> 
+                </div>
+            </div>
+        </div>
+  </ion-content>
+  

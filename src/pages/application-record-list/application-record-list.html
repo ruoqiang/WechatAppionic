@@ -1,0 +1,37 @@
+<!--
+  Generated template for the ApplicationRecordListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>申请记录</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+<div class="iscroll-box">
+    <ion-scroll scrollY="true">
+        <div class="list-box-wrap" *ngFor="let item of ApplyInfoList">
+          <div class="list-box">
+            <div class="list-car-info">
+              <p><span>申请人 </span><span>{{item.Name.slice(0,13)}}</span></p>
+              <p><span>车牌号</span><span>{{item.CarNum}}</span></p>
+              <p><span>车牌颜色</span><span>{{item.CarColor}}</span><span *ngIf="item.CarColor.length===1">牌</span></p>
+            </div>
+            <div class="status-btn" [ngClass]="calStatusBtn(item.CheckStatus)">
+              {{formCheckStatus(item.CheckStatus)}}
+            </div>
+          </div>
+      </div>
+      
+      <div class="h15"></div>
+      </ion-scroll>
+
+      <div class="tips-status" style="top:18%;height:auto;" [hidden]="ApplyInfoList.length>0"><p  class="statusImg no-record"></p> <p  class="desc">暂时还没有申请记录~</p> </div>
+</div>
+</ion-content>

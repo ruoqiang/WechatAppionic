@@ -1,0 +1,77 @@
+page-bill-list {
+    .bill-list {
+        height:47px;
+        position: relative;
+        margin-left: 15px;
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #333;
+      }
+      .bill-list:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-top: 1px solid #ddd;
+        content: ' ';
+        width: 100%;
+      }
+    //   .bill-list .car-img {
+    //     width: 68px;
+    //     height: 68px;
+    //     margin-right: 20px;
+    //     overflow: hidden;
+    //     padding: 1px 0;
+    //   }
+    //   bill-list.bill-list .car-img img {
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+      .bill-list .bill-number {
+        height: 47px;
+        line-height: 47px;
+      }
+      .icon-more2 {
+        position: absolute;
+        right: 2px;
+        top: 14px;
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+        color: #ccc;
+        // background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAcCAYAAABsxO8nAAAAAXNSR0IArs4c6QAAASpJREFUOBGl1a0OglAUB3AFCRiMBqubhcRGV4PJYLL4HL6F3ZcwOINZikkG0c3N7hNYGOD/wMWNqXDO9WyH+7F7fsB24bZbKoIg6KK7N01z67ruoZzntm1aqJAjuhNkDGwpxQwUtmzb7qEZUB9hJUmyi6JoUQx51xxyHOdhGMYUJTdVJsbyVyvvGYbhIE3TE8YjNcd+zQpExbrYB6SLfYV0sJ+QFKuFJFgjxMVYEAdjQ02YCCqxLMsiZJ/GiBhfxaxT9PlX7PwVVpcIFZ4xdxE9Ef4SaxRuqFqFj3bued6TDdUhhLKgJoQFcZBGiIvUQhLkJyRFvkI6yAeki1Sgf5A3BGSIwRVp0STCR+Y7lgacyI8jbPE7HYooiJE+UoRgfTVwgozxdHR0i+MFo+bK2M2ArcwAAAAASUVORK5CYII=') no-repeat center;
+        // background-size: 10px 20px;
+      }
+      .tips-status-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        text-align: center;
+      }
+      .tips-status-box .ptc {
+        margin-top: 30%;
+        position: relative;
+      }
+      .statusImg.no-record {
+        background: url('../assets/imgs/no-record.png');
+        background-size: cover;
+        }
+        .billTips{
+          padding: 15px;
+          line-height: 1.5;
+          h3{
+            font-size: 17px;
+            margin-bottom: 13px;
+          }
+          h4{
+            font-size: 15px;
+            margin-bottom: 10px;
+          }
+          em{color: #2D4ED1;font-style: normal;}
+        }
+}

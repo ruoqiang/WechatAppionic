@@ -1,0 +1,65 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      用户登录
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- 
+<ion-header>
+    <ion-navbar>
+      <ion-icon name="arrow-back"><span>返回</span><span>关闭</span></ion-icon>
+      <ion-title>用户登录</ion-title>
+    </ion-navbar>
+  </ion-header> -->
+<ion-content padding>
+  <div data-v-3c0fb276="" id="">
+    <div data-v-d0f50a12="" data-v-3c0fb276="" class="title">
+      <div data-v-3c0fb276="" data-v-d0f50a12="">用户登录</div>
+    </div>
+    <div data-v-1a32f292="" data-v-3c0fb276="" class="inputBox padType">
+      <div data-v-1a32f292="" class="input size-0 align-1">
+        <label data-v-3c0fb276="" data-v-1a32f292="">手机号</label>
+        <input [(ngModel)]="mobile" type="tel" name="" placeholder="请输入手机号" maxlength="11">
+      </div>
+    </div>
+    <div data-v-1a32f292="" data-v-3c0fb276="" class="inputBox padType">
+      <div data-v-1a32f292="" class="input size-0 align-1">
+        <label data-v-3c0fb276="" data-v-1a32f292="">密&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+        <input  placeholder="请输入密码" [(ngModel)]="password"
+          maxlength="16" [type]="pswType">
+        <ion-icon [name]="eyeStatus" class="eye" (click)="eyeSwitch()"></ion-icon>
+      </div>
+    </div>
+    <div data-v-3c0fb276="" class="buttonBox" [ngClass]="{'disable':btnDisable===true}">
+        <div data-v-766fd0c5="" class="button">
+          <button ion-button block (click)="login()" [color]="btnDisable===true?'light':''">确定</button>
+        </div>
+    </div>
+    <!-- <button class="button" ion-button block (click)="login()">登录</button> -->
+    <div data-v-3c0fb276="" class="forget-register">
+      <a data-v-3c0fb276="" class="extend-click"  (click)="gotofindpassword()">忘记密码？</a>
+      <a data-v-3c0fb276="" class="extend-click register-btn" (click)="gotoresigster()">立即注册</a>
+    </div>
+    <div data-v-c2fe12d2="" data-v-3c0fb276="" class="top-tip" style="display: none;">
+      请输入。。
+    </div>
+    <div data-v-7811bac2="" data-v-3c0fb276="" class="confirm" style="display: none;">
+      <div data-v-7811bac2="" class="confirm-wrapper">
+        <div data-v-7811bac2="" class="confirm-content">
+          <p data-v-7811bac2="" class="text">请输入。。</p>
+          <div data-v-7811bac2="" class="operate">
+            <!---->
+            <div data-v-7811bac2="" class="operate-btn">确定</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

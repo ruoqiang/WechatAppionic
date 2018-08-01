@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-navbar>
+      <!-- <ion-icon name="arrow-back"><span>返回</span></ion-icon> -->
+      <ion-title>首页</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <!-- <h1><img src="./../../assets/imgs/banner.png"></h1> -->
+<ion-content>
+  <div class="slide-wrap">
+      <ion-slides pager loop="true" autoplay="3000" >
+          <ion-slide>
+            <h1><img src="assets/imgs/banner.png"></h1>
+          </ion-slide>
+          <ion-slide>
+            <h1><img src="assets/imgs/banner2.png"></h1>
+          </ion-slide>
+          <ion-slide>
+            <h1><img src="assets/imgs/banner3.png"></h1>
+          </ion-slide>
+        </ion-slides>
+  </div>
+  <ion-grid style="margin-top: 10px;">
+      <ion-row>
+        <ion-col col-3 class="home-icon" (tap)="gotoUserInfo()">
+            <img src="assets/imgs/icon-ETC.png" alt="" >
+            <p>办理ETC</p>  
+        </ion-col>
+        <ion-col col-3 class="home-icon">
+            <img src="assets/imgs/icon-applyRecord.png" alt="" (tap)="gotoApplicationRecordList()">
+            <p>申请记录</p>  
+        </ion-col>
+        <ion-col col-3 class="home-icon" >
+            <img src="assets/imgs/icon-bill.png" alt="" (tap)="gotoCarSelect(1)">
+            <p>我的账单</p>  
+        </ion-col>
+        <ion-col col-3 class="home-icon"  (tap)="gotoCarSelect(2)">
+            <img src="assets/imgs/icon-record.png" alt="">
+            <p>通行记录</p>  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div class="scrollBox">
+            <h2 >新闻资讯</h2>
+        <ion-scroll scrollX="true">
+            <ul>
+                <li><img src="assets/imgs/action001.png" alt=""  (click)="showPop1()"></li>
+                <li><img src="assets/imgs/action002.png" alt=""  (click)="showPop2()"></li>
+            </ul>
+        </ion-scroll>
+    </div>
+    
+    <ion-scroll scrollY="true"  class="register-pop-scroll" [hidden]="!isShowPop1">
+            <div class="register-pop nopadding" title="开票新规">
+                    <div class="he20"></div>
+                    <p class="pd2em">从2018年1月1日起，开具方式又有变化了！<br/>2018年开始产生的通行费发票需通过新平台开具</p>
+                    <p>需要报销路费和抵扣税款的用户，都要更新信息。</p>
+                    <p>几句话看懂开票流程：</p>
+                    <p>1.易路通达平台办理ETC黔通卡</p>
+                    <p>2.登录发票服务网站<a href="javascript:void(0)">www.txffp.com</a>或下载“票根”APP凭手机号码注册</p>
+                    <p>3.登录发票服务平台，完成绑卡（需和办理ETC卡片用户信息一致）</p>
+                    <p>4.登录→发票购买方信息→选择交易记录</p>
+                    <p>5.谁通行，谁开票，开票信息需在通行前修改</p>
+                    <p>6.产生通行费10天之后可以开票（遇到法定节假日，时间顺延）；充值电子发票，可实时取得</p>
+                    <p>7.全国增值税发票<strong>电脑端</strong>查验平台 <a href="javascript:void(0)" target="_blank">https://inv-veri.chinatax.gov.cn/</a> </p>
+                    <p>8.发票服务平台热线：95022</p>
+
+                    <div class="back-btn-close" (tap)="hidePop1()">
+                         <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>
+                    </div>
+            </div>
+    </ion-scroll>
+    <ion-scroll scrollY="true"  class="register-pop-scroll" [hidden]="!isShowPop2">
+            <div class="register-pop" title="开票公告">
+                    <div class="he20"></div>
+                    <p>尊敬的黔通卡用户：</p>
+                    <p>根据《交通运输部办公厅、财政部办公厅、国家税务总局办公厅关于印发〈完善收费公路通行费增值税发票开具工作实施方案〉的通知》（交办公路〔2017〕98号），为方便您在2018年1月1日后行驶收费公路开具通行费增值税电子普通发票，现将有关事项公告如下：</p>
+                    <p>一、按照《交通运输部办公厅、国家税务总局办公厅关于印发〈收费公路通行费增值税电子普通发票开具运营与服务规则〉的通知》要求，尚未申办黔通卡的车主客户可提前办理用户卡（即“黔通卡”）作为收费公路通行车辆实车认证的唯一凭证，据此开具通行费增值税电子发票。</p>
+                    <p>二、为确保您顺利开具增值税电子发票，开票所需信息将上传至通行费增值税电子发票服务平台 www.txffp.com（下称电子发票服务平台）或“票根APP”，请您确保办卡预留信息（开户姓名、证件资料、联系人、手机号码等）合法有效。如办卡预留信息发生变化，或者黔通卡内没有写入车牌、车牌与实际不符、一车多卡等情况，请及时联系黔通卡客服中心办理补录或变更手续，以免影响增值税电子发票顺利出具。</p>
+                    <p>三、2018年1月1日起，黔通卡客户通行收费公路后需开具电子消费发票的，在使用黔通卡正常缴交通行费之日起第10个自然日后（遇法定假日顺延），可登陆电子发票服务平台办理；黔通卡客户充值后需开具电子充值发票的，可登陆电子发票服务平台即刻办理（开具充值发票后，不再重复出具消费发票）。在2017年底前发生黔通卡充值和通行消费但未开具电子发票的，请尽快联系黔通卡客服中心办理。</p>
+                    <p>四、2018年1月1日开始，ETC卡内没有车牌信息、卡内车牌与实际不符的，除不能正常开具增值税电子发票外，现场不能使用ETC卡缴费，需转现金收费。</p>
+                    <p>特此公告</p>
+                    <p>上海易路通达车联网信息科技有限公司</p>
+                    <p>2018年1月4日</p>
+
+                    <div class="back-btn-close" (click)="hidePop2()">
+                        <ion-icon ios="ios-close-circle" md="md-close-circle"></ion-icon>
+                    </div>
+            </div>
+    </ion-scroll>
+</ion-content>

@@ -1,0 +1,32 @@
+custom-toast{
+    .custom-toast {
+        position: absolute;
+        top: -60px;
+        width: 100%;
+        left: 50%;
+        transform: translate3d(-50%,0,0);
+        height: 40px;
+        color: #fff;
+        background-color:rgba(0,0,0,0.7);
+        // border-radius: 5px;
+        z-index: 100;
+        line-height: 40px;
+        text-align: center;
+    }
+    .my-show {
+        animation: my-toast-show .2s ease-in-out forwards;
+    }
+    
+    .my-hide {
+        animation: my-toast-hide .2s ease-in-out forwards;
+    }
+    @keyframes my-toast-show {
+        from { top: -60px; }
+        to { top: 0 }
+    }
+    
+    @keyframes my-toast-hide {
+        from { top: 0 }
+        to { top: -60px; } 
+    }
+}

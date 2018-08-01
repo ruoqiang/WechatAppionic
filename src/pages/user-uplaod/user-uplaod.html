@@ -1,0 +1,90 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>证件照片</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content>
+    <div class="head-setp">
+        <div class="setp">
+            <div class="setp-tips-box">
+                <span >申请人信息</span><span >车辆信息</span><span class="active">证件照片</span><span class="">收货地址</span>
+            </div>
+            <div class="setp-dot-box">
+                <span class="active"></span><span class="active setp-line"></span><span class="active"></span><span class="active setp-line"></span>
+                <span class="active">
+                </span><span class="active setp-line"></span><span class=""></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-box" style="pointer-events: auto;">
+        <div class="inputBox padType2">
+            <div class="input size-2 align-0"><h2>上传身份证照片</h2></div>
+        </div>
+        <div class="list-box">
+            <ul>
+                <li>
+                    <div class="img-box" (click)="presentActionSheet(0)">
+                        <img *ngIf="uploadImgSrc[0]['src']" [src]="uploadImgSrc[0]['src']" alt="">
+                    </div> <p class="desc">上传身份证正面照</p><!-- (click)="uploadImage()" -->
+                </li>
+                <li>
+                    <div class="img-box" (click)="presentActionSheet(1)">
+                        <img *ngIf="uploadImgSrc[1]['src']" [src]="uploadImgSrc[1]['src']"  alt="">
+                    </div> <p class="desc">上传身份证反面照</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="split-line" style="pointer-events: auto;"></div>
+    <div class="form-box" style="pointer-events: auto;">
+        <div class="inputBox padType2">
+            <div class="input size-2 align-0"><h2>上传驾驶证照片</h2><!--<img *ngIf="testBase64" [src]="testBase64" width="40"  />--></div>
+            <!-- (click)="doCamera()" -->
+        </div>
+        <div class="list-box">
+            <ul>
+                <li>
+                    <div class="img-box" (click)="presentActionSheet(2)">
+                        <img *ngIf="uploadImgSrc[2]['src']" [src]="uploadImgSrc[2]['src']"  alt="">
+                    </div> <p class="desc">上传驾驶证正页照</p> <!-- (click)="doCamera()" -->
+                    <!-- <input type="file" value="" id="0" accept="image/jpg,image/jpeg,image/png,image/gif"> -->
+                </li>
+                <li>
+                    <div class="img-box" (click)="presentActionSheet(3)">
+                        <img *ngIf="uploadImgSrc[3]['src']" [src]="uploadImgSrc[3]['src']"  alt="">
+                    </div> <p class="desc">上传驾驶证反面照</p>
+                    <!-- <input type="file" name="" value="" text="请选择图片" id="1" accept="image/jpg,image/jpeg,image/png,image/gif"> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="split-line" style="pointer-events: auto;"></div>
+    <div class="form-box" style="pointer-events: auto;">
+        <div class="inputBox padType2">
+            <div class="input size-2 align-0"><h2>上传行驶证照片</h2></div>
+        </div>
+        <div class="list-box">
+            <ul>
+                <li>
+                    <div class="img-box" (click)="presentActionSheet(4)">
+                        <img *ngIf="uploadImgSrc[4]['src']" [src]="uploadImgSrc[4]['src']"  alt="">
+                    </div> <p class="desc">上传行驶证正页照</p>
+                    <!-- <input type="file" value="" id="0" accept="image/jpg,image/jpeg,image/png,image/gif"> -->
+                </li>
+                <li>
+                    <div class="img-box" (click)="presentActionSheet(5)">
+                        <img *ngIf="uploadImgSrc[5]['src']" [src]="uploadImgSrc[5]['src']"  alt="">
+                    </div> <p class="desc">上传行驶证反面照</p>
+                    <!-- <input type="file" name="" value="" text="请选择图片" id="1" accept="image/jpg,image/jpeg,image/png,image/gif"> -->
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="buttonBox" (click)="nextPage()" [ngClass]="{'disable':btnDisable===true}">
+        <div class="plr15 mt40">
+            <button ion-button block [color]="btnDisable===true?'light':''">下一步</button>
+        </div>
+    </div>
+    <div style="height: 40px; pointer-events: auto;"></div>
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "name": "myWechatApp",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/", 
+      "proxyUrl": "http://wechat.chepass.com:8021/"
+    }
+  ]
+}
